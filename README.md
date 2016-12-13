@@ -16,7 +16,7 @@ g++ -I/usr/local/include/cryptopp -o read_message read_message.cpp -lgcrypt -lsq
 ./read_message [message_id] ['passphrase']
 
 
-2. This gee-mail has web user interface which is written in php.
+2.This gee-mail has web user interface which is written in php.
 There might be some problem when you run the web on your local host because our implementation achieved in cloud service.
 To make this work, you need to modify the url which is like ' window.location.assign("https://geemail-cloned-parkhe.c9users.io/register.php"); '.
 
