@@ -1,0 +1,61 @@
+Flawfinder version 1.27, (C) 2001-2004 David A. Wheeler.
+Number of dangerous functions in C/C++ ruleset: 160
+
+workspace/check_login.cpp:125:  [4] (format) printf:
+  If format strings can be influenced by an attacker, they can be
+  exploited. Use a constant for the format specification. 
+workspace/check_login.cpp:82:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+workspace/read_message.cpp:19:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+workspace/read_message.cpp:168:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+workspace/register.cpp:53:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+workspace/write_message.cpp:19:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+workspace/write_message.cpp:230:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+workspace/check_login.cpp:20:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+workspace/check_login.cpp:22:  [1] (buffer) strncpy:
+  Easily used incorrectly; doesn't always \0-terminate or check for
+  invalid pointers. 
+workspace/check_login.cpp:57:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+workspace/check_login.cpp:64:  [1] (buffer) strncpy:
+  Easily used incorrectly; doesn't always \0-terminate or check for
+  invalid pointers. 
+workspace/read_message.cpp:143:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+workspace/read_message.cpp:150:  [1] (buffer) strncpy:
+  Easily used incorrectly; doesn't always \0-terminate or check for
+  invalid pointers. 
+workspace/register.cpp:28:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+workspace/register.cpp:35:  [1] (buffer) strncpy:
+  Easily used incorrectly; doesn't always \0-terminate or check for
+  invalid pointers. 
+workspace/write_message.cpp:29:  [1] (buffer) strncpy:
+  Easily used incorrectly; doesn't always \0-terminate or check for
+  invalid pointers. 
+workspace/write_message.cpp:205:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+workspace/write_message.cpp:212:  [1] (buffer) strncpy:
+  Easily used incorrectly; doesn't always \0-terminate or check for
+  invalid pointers. 
+
+

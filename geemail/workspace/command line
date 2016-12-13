@@ -1,0 +1,23 @@
+g++  -I/usr/local/include/cryptopp example.cpp -lcryptopp -o salsa20
+
+./salsa20
+
+
+
+ g++ -o check_login check_login.cpp -lgcrypt -lsqlite3
+
+  geemail.db
+  
+  
+  
+ ./check_login username passwd
+ 
+ 
+  ./register username passwd
+  
+  
+  ./write_message sender receiver 'message'
+  
+  
+  ./read_message sender receiver mid
+  

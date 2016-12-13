@@ -1,0 +1,13 @@
+I  lvoe you /n
+I like a  /n
+llll  /n
+$file = 'a.txt';
+   $fh = fopen("a.txt", 'r');
+
+    $pageText = fread($fh, 25000);
+    
+    exec("./showinfomation $name",$show);
+
+
+
+echo implode(' ,', $show);

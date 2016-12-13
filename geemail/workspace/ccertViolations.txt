@@ -1,0 +1,8 @@
+./register --
+
+MEM31-C: Free dynamically allocated memory when no longer needed
+SQL-INJECTION Exploit
+MEM35-C: Allocate sufficient memory for an object
+STR31-C: Guarantee that storage for strings has sufficient space for character data and the null terminator(try python char overflow to prove this)
+STR32-C:(if python exploit works) Do not pass a non-null-terminated character sequence to a library function that expects a string
+  

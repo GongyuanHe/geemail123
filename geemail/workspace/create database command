@@ -1,0 +1,21 @@
+sqlite3 message.db
+CREATE TABLE message ( mid INT PRIMARY KEY   NOT NULL, sender CHAR(50), receiver CHAR(50));
+.tables
+.schema message
+INSERT INTO message (mid,sender,receiver) VALUES (1 , 'tom' , 'mike');
+INSERT INTO message (mid,sender,receiver) VALUES ( 2, 'tom1' ,'mike2');
+INSERT INTO message (mid,sender,receiver) VALUES (3,'tom3','mike3');
+INSERT INTO message (mid,sender,receiver) VALUES (4,'tom4','mike4');
+INSERT INTO message (mid,sender,receiver) VALUES (5,'tom4','mike');
+INSERT INTO message (mid,sender,receiver) VALUES (6,'tom','mike');
+
+SELECT mid, sender FROM message where receiver = 'mike' ;
+select sender , count(*) from message where receiver = 'mike'group by sender ;
+
+g++ rd_message.cpp -l sqlite3
+ ./a.out
+ 
+  g++ -o showinfomation rd_message.cpp -lsqlite3
+   ./showinfomation sender
+   
+SELECT sender, mid FROM message where receiver = 'mike';
